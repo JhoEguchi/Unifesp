@@ -1,0 +1,40 @@
+    Tipo: int
+        Função: calculasoma
+            Tipo: integer
+                Variável: a
+            Atribuição
+                Id: a
+                Op: +
+                    Id: a
+                    Const: 5
+            Return: 
+                Id: a
+        Tipo: void
+            Função: main
+                Tipo: int
+                    Variável: x
+                Tipo: int
+                    Variável: i
+                Tipo: int
+                    Variável: y
+                Atribuição
+                    Id: x
+                    Chamada da função input: 
+                Atribuição
+                    Id: i
+                    Const: 0
+                While
+                    Op: <
+                        Id: i
+                        Id: x
+                    Atribuição
+                        Id: y
+                        Chamada da função calculasoma: 
+                            Id: i
+                    Chamada da função output: 
+                        Id: y
+                    Atribuição
+                        Id: i
+                        Op: +
+                            Id: i
+                            Const: 1

@@ -1,0 +1,142 @@
+int PC;
+int programaAtual;
+int programNumber;
+
+void executaNprograma(int n){
+    int firsttime;
+    int program;
+    int p; int cont; int aux;
+    firsttime = 0;
+    cont = 0;
+    p = 0;
+    while(p < n){
+        program = input();
+        output(program);
+        while(cont < 64){
+            PC = PC + 1;
+            CpyHDtoIM(PC, program, cont);
+            cont = cont + 1;
+        }
+        cont = 0;
+        p = p + 1;
+    }
+    p = 0;
+    while(p < n){
+        PC = PC - 64;
+        p = p + 1;
+    }
+    PC = PC + 1;
+    programaAtual = 0;
+    Display(2);
+    setCS();
+    Execproc(PC);
+
+    unSetCS();
+    Display(1);
+    cont = 0;
+    while(cont < 9){
+        aux = cont + 64;
+        CpyRegtoHD(cont, programaAtual, aux);
+        cont = cont + 1;
+    }
+
+    cont = 20;
+
+    while(cont < 32){
+        aux = cont + 64;
+        CpyRegtoHD(cont, programaAtual, aux);
+        cont = cont + 1;
+    }
+
+    while(cont < 64){
+        aux = cont + 64;
+        CpyDMtoHD(cont, programaAtual, aux);
+        cont = cont + 1;
+    }
+
+    cont = 0;
+
+    programaAtual = programaAtual + 1;
+
+    if(programaAtual == programNumber){
+        programaAtual = 0;
+        firsttime = 1;
+    }
+
+    if(firsttime == 0){
+        p = 0;
+        while(cont < programaAtual){
+            p = p + 64;
+            cont = cont + 1;
+        }
+        p = p + PC;
+        cont = 0;
+        Display(programaAtual+2);
+        setCS();
+        Execproc(p);
+    }
+
+    while(cont < 9){
+        aux = cont + 64;
+        CpyHDtoReg(cont, programaAtual, aux);
+        cont = cont + 1;
+    }
+
+    cont = 20;
+
+    while(cont < 32){
+        aux = cont + 64;
+        CpyHDtoReg(cont, programaAtual, aux);
+        cont = cont + 1;
+    }
+
+    while(cont < 64){
+        aux = cont + 64;
+        CpyHDtoDM(cont, programaAtual, aux);
+        cont = cont + 1;
+    }
+
+    Display(programaAtual+2);
+    setCS();
+    jumpProc();
+
+}
+
+void executaprograma(int program){
+    int i;
+    i = 0;
+    output(program);
+    while(i < 47){
+        PC = PC + 1;
+        CpyHDtoIM(PC, program, i);
+        i = i + 1;
+    }
+    PC = PC - 46;
+    Execproc(PC);
+}
+
+void main(void){
+    int option; int i; int program;
+    i = 1;
+    while (i == 1){
+
+        option = input();
+        output(option);
+        PC = 399;
+        if(option == 1)
+        {
+            program = input();
+            executaprograma(program);
+        }
+        if(option == 2)
+        {
+            programNumber = input();
+            executaNprograma(programNumber);
+        }
+        if(option == 3)
+        {
+            i = 2;
+        }
+
+    }
+}

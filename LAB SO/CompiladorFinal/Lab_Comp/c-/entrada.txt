@@ -1,0 +1,17 @@
+int calculasoma(int a)
+{
+  a = a + 5;
+  return a;
+}
+
+void main(void)
+{  
+  int x; int i;
+  int y;
+  x = input(); i = 0;
+  while(i < x){
+    y = calculasoma(i);
+    output(y);
+    i = i + 1;
+  }
+}

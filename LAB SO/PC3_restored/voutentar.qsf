@@ -1,0 +1,166 @@
+# -------------------------------------------------------------------------- #
+#
+# Copyright (C) 2020  Intel Corporation. All rights reserved.
+# Your use of Intel Corporation's design tools, logic functions 
+# and other software and tools, and any partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Intel Program License 
+# Subscription Agreement, the Intel Quartus Prime License Agreement,
+# the Intel FPGA IP License Agreement, or other applicable license
+# agreement, including, without limitation, that your use is for
+# the sole purpose of programming logic devices manufactured by
+# Intel and sold by Intel or its authorized distributors.  Please
+# refer to the applicable agreement for further details, at
+# https://fpgasoftware.intel.com/eula.
+#
+# -------------------------------------------------------------------------- #
+#
+# Quartus Prime
+# Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
+# Date created = 09:07:04  September 17, 2020
+#
+# -------------------------------------------------------------------------- #
+#
+# Notes:
+#
+# 1) The default values for assignments are stored in the file:
+#		voutentar_assignment_defaults.qdf
+#    If this file doesn't exist, see file:
+#		assignment_defaults.qdf
+#
+# 2) Altera recommends that you do not modify this file. This
+#    file is updated automatically by the Quartus Prime software
+#    and any changes you make may be lost or overwritten.
+#
+# -------------------------------------------------------------------------- #
+
+
+set_global_assignment -name FAMILY "Cyclone IV E"
+set_global_assignment -name DEVICE EP4CE115F29C7
+set_global_assignment -name TOP_LEVEL_ENTITY Architeture
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION 20.1.0
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "09:07:04  SEPTEMBER 17, 2020"
+set_global_assignment -name LAST_QUARTUS_VERSION "17.1.0 Lite Edition"
+set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
+set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 1
+set_location_assignment PIN_H22 -to a[6]
+set_location_assignment PIN_J22 -to a[5]
+set_location_assignment PIN_L26 -to a[3]
+set_location_assignment PIN_L25 -to a[4]
+set_location_assignment PIN_E17 -to a[2]
+set_location_assignment PIN_F22 -to a[1]
+set_location_assignment PIN_G18 -to a[0]
+set_location_assignment PIN_U24 -to b[6]
+set_location_assignment PIN_U23 -to b[5]
+set_location_assignment PIN_W25 -to b[4]
+set_location_assignment PIN_W22 -to b[3]
+set_location_assignment PIN_W21 -to b[2]
+set_location_assignment PIN_Y22 -to b[1]
+set_location_assignment PIN_M24 -to b[0]
+set_location_assignment PIN_Y2 -to clock50
+set_location_assignment PIN_AB22 -to pushbutton
+set_location_assignment PIN_AG25 -to resetCPU
+set_location_assignment PIN_AD22 -to switch[16]
+set_location_assignment PIN_AF22 -to switch[15]
+set_location_assignment PIN_AF21 -to switch[14]
+set_location_assignment PIN_AE22 -to switch[13]
+set_location_assignment PIN_AC22 -to switch[12]
+set_location_assignment PIN_AF25 -to switch[11]
+set_location_assignment PIN_AE21 -to switch[10]
+set_location_assignment PIN_AF24 -to switch[9]
+set_location_assignment PIN_AF15 -to switch[8]
+set_location_assignment PIN_AD19 -to switch[7]
+set_location_assignment PIN_AF16 -to switch[6]
+set_location_assignment PIN_AC19 -to switch[5]
+set_location_assignment PIN_AE15 -to switch[4]
+set_location_assignment PIN_AD15 -to switch[3]
+set_location_assignment PIN_AE16 -to switch[2]
+set_location_assignment PIN_AD21 -to switch[1]
+set_location_assignment PIN_Y16 -to switch[0]
+set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
+set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
+set_global_assignment -name TIMEQUEST_MULTICORNER_ANALYSIS ON
+set_global_assignment -name SMART_RECOMPILE ON
+set_global_assignment -name ENABLE_OCT_DONE OFF
+set_global_assignment -name ENABLE_CONFIGURATION_PINS OFF
+set_global_assignment -name ENABLE_BOOT_SEL_PIN OFF
+set_global_assignment -name STRATIXV_CONFIGURATION_SCHEME "PASSIVE SERIAL"
+set_global_assignment -name USE_CONFIGURATION_DEVICE OFF
+set_global_assignment -name CRC_ERROR_OPEN_DRAIN OFF
+set_global_assignment -name RESERVE_ALL_UNUSED_PINS_WEAK_PULLUP "AS INPUT TRI-STATED"
+set_global_assignment -name OUTPUT_IO_TIMING_NEAR_END_VMEAS "HALF VCCIO" -rise
+set_global_assignment -name OUTPUT_IO_TIMING_NEAR_END_VMEAS "HALF VCCIO" -fall
+set_global_assignment -name OUTPUT_IO_TIMING_FAR_END_VMEAS "HALF SIGNAL SWING" -rise
+set_global_assignment -name OUTPUT_IO_TIMING_FAR_END_VMEAS "HALF SIGNAL SWING" -fall
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name OPTIMIZATION_MODE "AGGRESSIVE AREA"
+set_global_assignment -name OPTIMIZE_MULTI_CORNER_TIMING OFF
+set_global_assignment -name OPTIMIZE_TIMING OFF
+set_global_assignment -name OPTIMIZE_IOC_REGISTER_PLACEMENT_FOR_TIMING OFF
+set_global_assignment -name ROUTER_TIMING_OPTIMIZATION_LEVEL MINIMUM
+set_location_assignment PIN_L6 -to LCD_BLON
+set_location_assignment PIN_M5 -to LCD_DATA[7]
+set_location_assignment PIN_M3 -to LCD_DATA[6]
+set_location_assignment PIN_K2 -to LCD_DATA[5]
+set_location_assignment PIN_K1 -to LCD_DATA[4]
+set_location_assignment PIN_K7 -to LCD_DATA[3]
+set_location_assignment PIN_L2 -to LCD_DATA[2]
+set_location_assignment PIN_L1 -to LCD_DATA[1]
+set_location_assignment PIN_L3 -to LCD_DATA[0]
+set_location_assignment PIN_L4 -to LCD_EN
+set_location_assignment PIN_L5 -to LCD_ON
+set_location_assignment PIN_M2 -to LCD_RS
+set_location_assignment PIN_M1 -to LCD_RW
+set_location_assignment PIN_W28 -to c[6]
+set_location_assignment PIN_W27 -to c[5]
+set_location_assignment PIN_Y26 -to c[4]
+set_location_assignment PIN_W26 -to c[3]
+set_location_assignment PIN_Y25 -to c[2]
+set_location_assignment PIN_AA26 -to c[1]
+set_location_assignment PIN_AA25 -to c[0]
+set_global_assignment -name OPTIMIZE_HOLD_TIMING OFF
+set_global_assignment -name MIF_FILE hd.mif
+set_global_assignment -name VERILOG_FILE PC.v
+set_global_assignment -name VERILOG_FILE bancoreg.v
+set_global_assignment -name VERILOG_FILE ULA.v
+set_global_assignment -name VERILOG_FILE extensorbit.v
+set_global_assignment -name VERILOG_FILE memoriadados.v
+set_global_assignment -name VERILOG_FILE conversorbin.v
+set_global_assignment -name VERILOG_FILE decodificador.v
+set_global_assignment -name VERILOG_FILE saida.v
+set_global_assignment -name VERILOG_FILE mux2.v
+set_global_assignment -name VERILOG_FILE mux3.v
+set_global_assignment -name VERILOG_FILE CPU.v
+set_global_assignment -name VERILOG_FILE beqorjump.v
+set_global_assignment -name VERILOG_FILE muxPC.v
+set_global_assignment -name VERILOG_FILE UC.v
+set_global_assignment -name VERILOG_FILE mux2sl.v
+set_global_assignment -name VERILOG_FILE mux4.v
+set_global_assignment -name VERILOG_FILE DivisorF.v
+set_global_assignment -name VERILOG_FILE debounce.v
+set_global_assignment -name VERILOG_FILE adder.v
+set_global_assignment -name VERILOG_FILE select5bits.v
+set_global_assignment -name VERILOG_FILE DivisorF05.v
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform.vwf
+set_global_assignment -name MIF_FILE instrucao.mif
+set_global_assignment -name VERILOG_FILE Interruption.v
+set_global_assignment -name VERILOG_FILE mux21v.v
+set_global_assignment -name VERILOG_FILE Architeture.v
+set_global_assignment -name VERILOG_FILE memoriainstrucao.v
+set_global_assignment -name VERILOG_FILE HD.v
+set_global_assignment -name VERILOG_FILE demux.v
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform1.vwf
+set_global_assignment -name VERILOG_FILE calculaendereco.v
+set_global_assignment -name VERILOG_FILE BIOS.v
+set_global_assignment -name MIF_FILE bios.mif
+set_global_assignment -name VERILOG_FILE biosmux.v
+set_global_assignment -name VERILOG_FILE lcdlab3.v
+set_global_assignment -name VERILOG_FILE LCD_Display.v
+set_global_assignment -name VERILOG_FILE Reset_Delay.v
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

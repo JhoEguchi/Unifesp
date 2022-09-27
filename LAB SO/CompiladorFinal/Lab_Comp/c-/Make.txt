@@ -1,0 +1,4 @@
+flex c.l
+bison -d yacc.y
+gcc -Wall -c *.c -O2
+gcc -Wall -g -o Exec *.o -ly -lm -O3
